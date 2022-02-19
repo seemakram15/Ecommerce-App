@@ -1,0 +1,21 @@
+<%= render 'wellcome/header' %>
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div class="item">
+          <p class="text-primary"></p><img src="<%=image_path('https://secure-xquic.s3.us-west-1.amazonaws.com/uploads/updated-icons/Icons/Store+Icon-01.svg')%>" alt="camera" class="img-fluid">
+          <a href="<%= new_user_product_path(@user.id) %>"><h2 class="add-product">Add Product</h2></a>
+        </div>
+      </div>
+      <% @products.each do |product|%>
+        <div class="col-md-4">
+          <div class="item">
+            <h3><%= product.name %></h3>
+            <p class="text-primary"><%= ecommerce_price_format(product.price) %></p><%= image_tag(product.images[0])%>
+            <div class="overlay d-flex align-items-center justify-content-center"><a href="<%= user_product_path(user_id: @user.id, id:product.id) %>" class="btn btn-unique" data-abc="true">View Details</a></div>
+          </div>
+        </div>
+      <% end%>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+development:
+  cloud_name: "privateuseonly"
+  api_key: "787453543361964"
+  api_secret: "qvI7k1RNMZMgb_upuE6vFUxonkc"
+  secure: true
+
+production:
+  cloud_name: "privateuseonly"
+  api_key: "787453543361964"
+  api_secret: "qvI7k1RNMZMgb_upuE6vFUxonkc"
+  secure: true

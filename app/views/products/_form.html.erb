@@ -1,0 +1,28 @@
+<div class="text-center container-fluid col-md-12 col-sm-12 col-xs-12" id="product-form">
+  <h2 class="col-lg-12 user-form-align" product-data="<%= product.id %>">
+    <strong>Product Form</strong>
+  </h2>
+  <div class="card-body ">
+    <%= form_for @product, url: {action: "create"}, html: {class: 'form user-form-align', id: "listing-form"} do |form| %>
+      <div class="field form-group email-username eye-main-div ">
+        <%= form.text_field :name, autocomplete: "off", placeholder: "Enter Name of Product", class: "form-control input-filed" , id: 'user_product_name', required: true %>
+      </div>
+      <div class="field form-group email-username eye-main-div">
+        <%= form.text_field :description, autocomplete: "off", placeholder: "Enter Description", class: "form-control input-filed" , id: 'user_product_description' %>
+      </div>
+      <div class="field form-group email-username eye-main-div">
+        <%= form.number_field :price, autocomplete: "off", placeholder: "Enter Price of Product", class: "form-control input-filed" , id: 'user_product_price', required: true %>
+      </div>
+      <div class="field form-group email-username eye-main-div">
+        <%= form.number_field :quantity, autocomplete: "off", placeholder: "Available Stock", class: "form-control input-filed" , id: 'user_product_price', required: true %>
+      </div>
+      <div class="field form-group email-username">
+        <%= form.file_field :images, multiple: true, class: 'form-control input-filed' %>
+      </div>
+      <hr class='invisible'>
+      <div class="md-form">
+        <%= form.submit class: 'add-user-button' %>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+<%= render 'wellcome/header' %>
+<h1 class="text-center mb-5"><%= @product.name %></h1>
+<div class="row" style="margin: auto;">
+  <div class="col-md-4">
+    <% if @product.images.attached? %>
+      <div class="product-head">
+        <div class="row-fluid">
+          <div class="span12">
+            <div class="carousel slide" id="indexslider"> 
+              <div class="carousel-inner">
+                <% (0...@product.images.count).each do |image| %>
+                    <div class="item <%= "active" unless image!=0 %>">
+                      <%= image_tag @product.thumbnail(image, '3000'), class: "p_img", style: "height: 400px;width: 100%;", alt: image %>
+                    </div>
+                  <% end %>
+              </div>
+              <a class="left carousel-control" href="#indexslider" data-slide="prev">‹</a>
+              <a class="right carousel-control" href="#indexslider" data-slide="next">›</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <div class="w-100 text-center">No image attached</div>
+    <% end %>
+  </div>
+  <div class="col-md-6 d-flex">
+    <div class="">
+      <h4>Description:</h4>
+      <p class= "mb-4"><%= @product.description %></p>
+      <h4 class="col-md-4">Price: <span class="text-danger"><%= number_to_currency @product.price %></span></h4>
+      <h4 class="col-md-4">Stock:<span class="text-<%= if @product.quantity < 10 then "danger" elsif @product.quantity > 10 then "success" end %>">
+          <%= @product.quantity > 0 ? @product.quantity : "Out of Stock" %>
+        </span>
+      </h4>
+      <h4 class="col-md-4">Category: <span class="text-danger"><%= number_to_currency @product.price %></span></h4>
+    </div>  
+  </div>
+</div>
+<div class="row listing_new_form-btn-cont" style="margin: auto;">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="listing_btn-prev_cont">
+    <%= button_tag "Close", type: 'button', :class => 'ind-bus-contact-btn review-btn-mr-adjust' , id: 'listing-next-button'%>
+    <%= button_tag "Update Quantity", type: 'button', :class => 'ind-bus-contact-btn review-btn-mr-adjust' , id: 'listing-preview-button'%>
+    <%= button_tag "Edit Product", type: 'button', :class => 'ind-bus-contact-btn review-btn-mr-adjust' , id: 'listing-edit-button'%>
+  </div>
+</div>
+<script>
+$(document).ready(function () {           
+            $('.carousel').carousel();       
+        });
+</script>

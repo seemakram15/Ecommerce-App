@@ -1,0 +1,238 @@
+.login-form-header{
+    .navbar {
+      transition: all 0.4s;
+      background: cadetblue;
+  }
+
+  .navbar .nav-link {
+      color: #fff;
+  }
+  .nav-item{
+    margin-right: 30px;
+  }
+  #navbarSupportedContent{
+    float: right;
+    margin: 10px;
+    padding-right: 7%;
+  }
+  .ecommerce-heading{
+    color: white;
+    padding-left: 4%;
+    margin-top: 15px;
+  }
+  .ml-auto{
+    margin-top: 26px;
+  }
+}
+.login-main-class{
+  margin-top: -35px;
+  header {
+    position: relative;
+    background-color: black;
+    height: 93vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  @media (pointer: coarse) and (hover: none) {
+    header {
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+    }
+  
+    header video {
+      display: none;
+    }
+  }
+}
+.eye-main-div{
+  position: relative;
+  padding-bottom: 13px;
+    input{
+      padding: 0 15px;
+    }
+}
+#product-form{
+  width: 40%;
+  float: initial;
+  background: cadetblue;
+  margin-bottom: 40px;
+}
+#login_form{
+  width: 28%;
+  float: initial;
+  background: cadetblue;
+  margin-top: 5%;
+}
+#login_form1{
+  width: 40%;
+  float: initial;
+  background: cadetblue;
+  margin-top: 5%;
+}
+.lebel-style{
+  float: left;
+}
+.login-button{
+  background: #0d216e;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 7px 22px;
+  border: none;
+  border-radius: 7px;
+}
+.signup-button{
+  background: #FE5F6A;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 7px;
+}
+.login-on-signup-page{
+  float: right;
+}
+.signup-page-button{
+  float: left;
+  padding-left: 60%;
+  margin-top: -8px;
+  padding-bottom: 6px;
+}
+.email-username{
+  padding-top: 10px;
+}
+.login-page-button{
+  margin-bottom: -27px;
+  padding-left: 24%;
+}
+.row-styling{
+  margin: auto;
+}
+.forgot-your-password{
+  margin-top: 39px;
+  margin-bottom: 11px;
+  padding-right: 40px;
+}
+.send-password-ints{
+  margin-bottom: 33px;
+  background: black;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 8px 22px;
+  border: none;
+  border-radius: 7px;
+}
+.forgot-your-password1{
+  float: right;
+  padding-bottom: 25px;
+}
+.forgot-your-password2{
+  float: right;
+  padding-right: 19px;
+}
+.add-product{
+  text-align: center;
+  font-weight: 700;
+  color: midnightblue;
+}
+.add-user-button{
+  background: #0d216e;
+  border: 1px solid #0d216e;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1px 13px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "source_sans_proregular";
+  height: 31px;
+  margin-bottom: 0.5rem;
+}
+.user-form-align{
+  text-align: center;
+}
+.input-filed{
+  width: 30%;
+  background: #fff;
+  height: 35px;
+  padding: 0 15px;
+  font-size: 16px;
+  color: #0d216e;
+  border: 1px solid #0d216e;
+  border-radius: 10px;
+  margin-bottom: 15px
+}
+.select-picker-width{
+  width: 50% !important;
+}
+.add-category-button{
+  margin-right: 5px;
+  background: #0d216e;
+  border: none;
+  border-radius: 10px;
+  padding: 3px 15px;
+  color: #fff;
+  font-size: 16px;
+  float: right;
+  margin-bottom: 4px;
+}
+.product-head{
+  padding-left: 37px;
+}
+.listing_new_form-btn-cont{
+  margin: 0px 0 26px;
+  padding-left: 45%;
+}
+#listing_btn-prev_cont{
+  padding: 16px 3%;
+  margin-top: -56px;
+  margin: auto;
+}
+.ind-bus-contact-btn{
+  background: #0d216e;
+  color: #fff;;
+  font-size: 15px;
+  font-family: 'source_sans_proregular';
+  padding: 6px 25px 6px 25px;
+  border: 1px solid #0d216e;
+  height: 35px;
+  border-radius: 10px;
+  line-height: 20px;
+  margin-left: 5px;
+}
+.review-btn-mr-adjust {
+  margin-right: 10%;
+}
