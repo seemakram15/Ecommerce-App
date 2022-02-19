@@ -38,10 +38,10 @@
   </div>
 </div>
 <div class="row listing_new_form-btn-cont" style="margin: auto;">
-  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="listing_btn-prev_cont">
-    <%= button_tag "Close", type: 'button', :class => 'ind-bus-contact-btn review-btn-mr-adjust' , id: 'listing-next-button'%>
-    <%= button_tag "Update Quantity", type: 'button', :class => 'ind-bus-contact-btn review-btn-mr-adjust' , id: 'listing-preview-button'%>
-    <%= button_tag "Edit Product", type: 'button', :class => 'ind-bus-contact-btn review-btn-mr-adjust' , id: 'listing-edit-button'%>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="listing_btn-prev_cont">
+    <div class="ind-bus-contact-btn review-btn-mr-adjust"><%= link_to "Back",user_products_path(user_id: @user.id), :class => '' , id: 'listing-next-button'%></div>
+    <div class="ind-bus-contact-btn review-btn-mr-adjust"><%= link_to "Edit Product", edit_user_product_path(id: @product.id, user_id: @user.id), :class => '' , id: 'listing-edit-button'%></div>
+    <div class="ind-bus-contact-btn review-btn-mr-adjust"><%= link_to "Delete Product",delete_product_user_product_path(id: @product.id, user_id: @user.id ) , method: :delete, data: {confirm: "Are you sure you want to delete this product?"} ,:class => '' , id: 'listing-preview-button'%></div>
   </div>
 </div>
 <script>

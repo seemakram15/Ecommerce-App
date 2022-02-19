@@ -3,7 +3,7 @@
     <strong>Product Form</strong>
   </h2>
   <div class="card-body ">
-    <%= form_for @product, url: {action: "create"}, html: {class: 'form user-form-align', id: "listing-form"} do |form| %>
+    <%= form_with(model: [@user, product], local: true, class: 'text-center') do |form| %>
       <div class="field form-group email-username eye-main-div ">
         <%= form.text_field :name, autocomplete: "off", placeholder: "Enter Name of Product", class: "form-control input-filed" , id: 'user_product_name', required: true %>
       </div>
