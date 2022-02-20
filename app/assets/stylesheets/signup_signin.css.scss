@@ -53,6 +53,7 @@
   header .container {
     position: relative;
     z-index: 2;
+    padding-top: 60px;
   }
   
   header .overlay {
@@ -217,9 +218,8 @@
   padding-left: 45%;
 }
 #listing_btn-prev_cont{
-  padding: 16px 3%;
-  margin-top: -56px;
-  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 .ind-bus-contact-btn{
   background: #0d216e;
@@ -233,6 +233,6 @@
   line-height: 20px;
   margin-left: 5px;
 }
-.review-btn-mr-adjust {
-  margin-right: 10%;
+.review-btn-mr-adjust a{
+  color: #ffffff;
 }
