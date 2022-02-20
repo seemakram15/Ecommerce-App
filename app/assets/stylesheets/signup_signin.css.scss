@@ -233,6 +233,27 @@
   line-height: 20px;
   margin-left: 5px;
 }
+.ind-bus-contact-btn1{
+  font-size: 15px;
+  font-family: 'source_sans_proregular';
+  padding: 6px 6px 6px 25px;
+  border: 1px solid #0d216e;
+  height: 35px;
+  border-radius: 10px;
+  line-height: 20px;
+  margin-left: 5px;
+}
+.delete-category{
+  margin-left: 17px;
+  color: red;
+  img{
+    width: 20px;
+  }
+}
 .review-btn-mr-adjust a{
   color: #ffffff;
+}
+.review-btn-mr-adjust a:hover{
+  text-decoration: none;
+  color: white;
 }

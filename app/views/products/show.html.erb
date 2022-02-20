@@ -1,5 +1,5 @@
 <%= render 'wellcome/header' %>
-<h1 class="text-center mb-5"><%= @product.name %></h1>
+<h1 class="text-center mb-5 product-show-page" product-show-page="<%= @product.id %>"><%= @product.name %></h1>
 <div class="row" style="margin: auto;">
   <div class="col-md-4">
     <% if @product.images.attached? %>
@@ -33,8 +33,11 @@
           <%= @product.quantity > 0 ? @product.quantity : "Out of Stock" %>
         </span>
       </h4>
-      <h4 class="col-md-4">Category: <span class="text-danger"><%= number_to_currency @product.price %></span></h4>
-    </div>  
+      <h4 class="col-md-4">Seller name: <span class="text-danger"><%= @user.first_name + " " + @user.last_name %></span></h4>
+    </div> 
+      <h4 class="col-md-12">Category: <span><% get_categories_name(@product).each do |cat| %>
+      <span class="ind-bus-contact-btn1 review-btn-mr-adjust" category-id="<%= cat.id %>"><%= cat.name %><span class="delete-category"><%= image_tag ("x-circle.svg")%></span></span>
+      <% end %></span> <span class="text-danger add-category-in-product"><%= image_tag ("plus-circle.svg")%></span></h4>
   </div>
 </div>
 <div class="row listing_new_form-btn-cont" style="margin: auto;">
@@ -44,6 +47,7 @@
     <div class="signup-button review-btn-mr-adjust"><%= link_to "Delete Product",delete_product_user_product_path(id: @product.id, user_id: @user.id ) , method: :delete, data: {confirm: "Are you sure you want to delete this product?"} ,:class => '' , id: 'listing-preview-button'%></div>
   </div>
 </div>
+<%= render 'products/add_category' %>
 <script>
 $(document).ready(function () {           
             $('.carousel').carousel();       

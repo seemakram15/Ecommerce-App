@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     end
   end
   scope :product do
-    resources :categories, only: [:show, :create]
+    resources :categories, only: [:create, :destroy]
   end
 end
